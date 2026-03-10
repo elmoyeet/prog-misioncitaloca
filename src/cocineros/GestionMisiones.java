@@ -28,4 +28,18 @@ public class GestionMisiones {
 
         return mision.getId();
     }
+
+    public String listarMisiones() {
+        StringBuilder sb = new StringBuilder("Misiones: {");
+
+        for (int i = 0; i < misiones.size(); i++) {
+
+            sb.append(misiones.get(i).toString());
+
+            sb.append("}");
+
+        }
+
+        return sb.toString();
+    }
 }
