@@ -1,3 +1,7 @@
+package cocineros;
+
+import platosCombinados.Mision;
+
 import java.util.ArrayList;
 
 public class GestionMisiones {
