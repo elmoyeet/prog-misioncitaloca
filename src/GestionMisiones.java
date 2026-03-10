@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+
+public class GestionMisiones {
+
+    private ArrayList<Mision> misiones;
+
+    public GestionMisiones() {
+        this.misiones = new ArrayList<>();
+    }
+
+    public int crearMision(int id, String nombre, String dificultad,  int nivelRecomandado, int recompensaExperiencia, boolean completada) {
+
+        int idMisionCreada;
+
+        Mision mision = new Mision(id, nombre, dificultad, nivelRecomandado, recompensaExperiencia, completada);
+
+        idMisionCreada = agregarMision(mision);
+
+        return idMisionCreada;
+    }
+
+    public int agregarMision(Mision mision) {
+        this.misiones.add(mision);
+
+        return mision.getId();
+    }
+}
