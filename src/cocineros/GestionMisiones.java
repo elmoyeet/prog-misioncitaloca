@@ -55,4 +55,17 @@ public class GestionMisiones {
         return mision;
 
     }
+
+    public boolean eliminarMision(int id) {
+        boolean eliminado = false;
+
+        for (int i = 0; i < misiones.size(); i++) {
+            if (misiones.get(i).getId() == id) {
+                misiones.remove(i);
+                eliminado = true;
+            }
+        }
+
+        return eliminado;
+    }
 }
