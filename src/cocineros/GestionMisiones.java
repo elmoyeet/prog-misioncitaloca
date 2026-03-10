@@ -42,4 +42,17 @@ public class GestionMisiones {
 
         return sb.toString();
     }
+
+    public Mision buscarMision(int id) {
+        Mision mision = null;
+
+        for (int i = 0; i < misiones.size(); i++) {
+            if (misiones.get(i).getId() == id) {
+                mision = misiones.get(i);
+            }
+        }
+
+        return mision;
+
+    }
 }
